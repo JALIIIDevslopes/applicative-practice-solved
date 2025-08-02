@@ -6,6 +6,12 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
+  return data.planets.filter((planet) => {
+    return Object.hasOwn(planet, "moons");})
+    .reduce((sum, planetA) => {
+      return sum+planetA.moons.length;
+    }, 0);
+  
 }
 
 

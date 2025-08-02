@@ -6,8 +6,15 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
+   return data.planets.filter((planet) => {
+    return Object.hasOwn(planet, "moons");
+    }
+   )
+   .find( (planetA) => {
+     return planetA.moons.includes(moonName);
+   })
+  .name;
 }
-
 
 
 // === TEST YOURSELF ===

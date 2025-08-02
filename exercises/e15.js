@@ -6,6 +6,11 @@ import { data } from "../data/data";
 
 export function getPlanetsWithNoMoons(data) {
   // Your code goes here...
+    return data.planets.filter((planet) => {
+    return !Object.hasOwn(planet, "moons");
+  }).map((planetA) => {
+    return planetA.name;
+  });
 }
 
 

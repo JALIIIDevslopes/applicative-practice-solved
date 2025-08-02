@@ -10,11 +10,31 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
+  let min = null;
+  let curr = undefined;
 
-}
+  for (let element of array) {
+      if( min == null ||  cb(element)< min){
+          min=cb(element);
+          curr=element;
+      }
+    }
+    return curr;
+  }
+
+
 
 export function maxBy(array, cb) {
-  // Your code goes here...
+ let max = null;
+  let curr = undefined;
+
+  for (let element of array) {
+      if( max == null ||  cb(element)> max){
+          max=cb(element);
+          curr=element;
+      }
+    }
+    return curr;
 
 }
 
