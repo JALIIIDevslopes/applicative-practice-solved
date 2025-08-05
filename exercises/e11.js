@@ -7,11 +7,11 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
-   return data.planets.filter((planet) => {
-    return (!Object.hasOwn(planet, "moons") || planet.moons.length <10);
-  }).map((planetA) => {
-    return planetA.name;
-  });
+  return data.planets
+    .filter(
+      (planet) => !Object.hasOwn(planet, "moons") || planet.moons.length < 10
+    )
+    .map((planetA) => planetA.name);
 }
 
 // === TEST YOURSELF ===

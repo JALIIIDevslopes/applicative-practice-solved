@@ -6,14 +6,10 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
-   return data.planets.filter((planet) => {
-    return Object.hasOwn(planet, "moons");
-  }).map((planetA) => {
-    return planetA.name;
-  });
+  return data.planets
+    .filter((planet) => Object.hasOwn(planet, "moons"))
+    .map((planetA) => planetA.name);
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"

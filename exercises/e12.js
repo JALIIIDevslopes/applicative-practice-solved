@@ -6,15 +6,10 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
-  return data.planets.filter((planet) => {
-    return Object.hasOwn(planet, "moons");})
-    .reduce((sum, planetA) => {
-      return sum+planetA.moons.length;
-    }, 0);
-  
+  return data.planets
+    .filter((planet) => Object.hasOwn(planet, "moons"))
+    .reduce((sum, planetA) => sum + planetA.moons.length, 0);
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"
